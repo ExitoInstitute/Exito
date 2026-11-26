@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- NOTA FRANK #1: DOMINIO es un marcador; cambiarlo por el dominio real. gracias.html no va aquí porque no debe salir en Google. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://DOMINIO/Home.html</loc><lastmod>2026-11-26</lastmod><priority>1.0</priority></url>
+  <url><loc>https://DOMINIO/LT.html</loc><lastmod>2026-11-26</lastmod><priority>0.9</priority></url>
+  <url><loc>https://DOMINIO/Taxes.html</loc><lastmod>2026-11-26</lastmod><priority>0.9</priority></url>
+  <url><loc>https://DOMINIO/Coaching.html</loc><lastmod>2026-11-26</lastmod><priority>0.9</priority></url>
+  <url><loc>https://DOMINIO/privacidad.html</loc><lastmod>2026-11-26</lastmod><priority>0.3</priority></url>
+  <url><loc>https://DOMINIO/terminos.html</loc><lastmod>2026-11-26</lastmod><priority>0.3</priority></url>
+  <url><loc>https://DOMINIO/cookies.html</loc><lastmod>2026-11-26</lastmod><priority>0.3</priority></url>
+</urlset>

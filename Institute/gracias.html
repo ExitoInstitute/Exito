@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="robots" content="noindex"/>
+<title>Gracias · Éxito Institute</title>
+<!-- NOTA FRANK: página de gracias. Stripe redirige aquí después de pagar, por ejemplo gracias.html?plan=vip&v=1500. Dispara Purchase en el píxel (solo si la persona aceptó cookies). -->
+<style>
+:root{--bg:#f4f2ed;--olive:#7b8e46;--ink:#000;--muted:#686664;--paper:#fffdf9;--border:#d9d5cb;--strong:#59662d;--dark:#22281b}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Aptos","Segoe UI",Arial,sans-serif;font-size:19px;line-height:1.6}
+.wrap{width:min(760px,calc(100% - 32px));margin:0 auto;padding:48px 0 64px}
+.brand{font-weight:800;letter-spacing:.16em;color:var(--strong);font-size:.85rem;text-transform:uppercase;margin:0 0 28px}
+h1{font-family:Georgia,"Times New Roman",serif;font-weight:500;font-size:clamp(2.4rem,7vw,3.6rem);line-height:1.1;margin:0 0 14px}
+.card{background:var(--paper);border:1px solid var(--border);border-radius:19px;padding:24px 26px;margin:26px 0}
+.card h2{font-family:Georgia,serif;font-weight:500;font-size:1.6rem;margin:0 0 12px}
+ol{margin:0;padding-left:24px}li{margin:10px 0}
+.btn{display:inline-flex;min-height:56px;align-items:center;padding:14px 22px;border-radius:9px;background:var(--olive);color:#10140b;font-weight:800;text-decoration:none}
+.muted{color:var(--muted);font-size:.95rem}
+a{color:inherit}
+footer{border-top:1px solid var(--border);margin-top:40px;padding-top:20px;font-size:.92rem;color:var(--muted)}
+footer a,footer button{margin-right:14px}
+.linkbtn{background:none;border:0;padding:0;font:inherit;color:inherit;text-decoration:underline;cursor:pointer}
+</style>
+</head>
+<body>
+<main class="wrap">
+<p class="brand">Éxito Institute · Plan Familia en Orden</p>
+<h1>¡Gracias! Recibimos tu compra.</h1>
+<p id="resumen">Tu pago se procesó con Stripe. Te llegará un recibo a tu correo.</p>
+
+<section class="card" aria-labelledby="pasos">
+<h2 id="pasos">Tus siguientes pasos</h2>
+<ol id="listaPasos">
+<li>Revisa tu correo: te llega el recibo de Stripe.</li>
+<li>Nuestro equipo te escribe para pedirte tus papeles. Tenlos a mano con la <strong>Lista de Papeles en 1 Hoja</strong>.</li>
+<li>Cuando tengamos tus papeles completos, tu borrador estará listo en <strong>2 semanas</strong> (planes VIP y Éxito).</li>
+</ol>
+</section>
+
+<p>¿Tienes una pregunta? Llama a la oficina al <a href="tel:+15103409093">+1 (510) 340-9093</a> o escribe por WhatsApp al <a href="https://wa.me/15109098823" rel="noopener noreferrer" target="_blank">+1 (510) 909-8823</a>.</p>
+<p><a class="btn" href="LT.html">VOLVER A LA PÁGINA PRINCIPAL</a></p>
+
+<footer>
+<p><strong>Aviso importante:</strong> Éxito Institute es un servicio administrativo y educativo. No somos abogados ni damos asesoría legal, de impuestos o de inversiones para tu caso.</p>
+<p><a href="privacidad.html">Privacidad</a><a href="terminos.html">Términos</a><a href="cookies.html">Cookies</a><button class="linkbtn" type="button" onclick="cookieSettings()">Configurar cookies</button><button class="linkbtn" type="button" onclick="noVender()">No vender ni compartir mi información personal</button></p>
+</footer>
+</main>
+
+<!-- NOTA FRANK: aviso de cookies + píxel de Meta. El píxel solo carga si la persona acepta. Cambia PIXEL_ID por el número del píxel. -->
+<div id="ck" role="dialog" aria-live="polite" aria-label="Aviso de cookies" hidden style="position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;max-width:640px;margin:0 auto;background:#fff;color:#22281b;border:1px solid #d9d5cb;border-radius:14px;box-shadow:0 8px 30px rgba(0,0,0,.15);padding:18px 20px;font:17px/1.5 Arial,sans-serif">
+<p style="margin:0 0 12px">Usamos cookies para que la página funcione y, si aceptas, para medir nuestros anuncios. <a href="cookies.html" style="color:#59662d">Ver política de cookies</a>.</p>
+<div style="display:flex;gap:10px;flex-wrap:wrap">
+<button type="button" onclick="cookieSet('si')" style="font:700 17px Arial;background:#7b8e46;color:#fff;border:0;border-radius:999px;padding:12px 22px;cursor:pointer">Aceptar</button>
+<button type="button" onclick="cookieSet('no')" style="font:700 17px Arial;background:#fff;color:#22281b;border:1px solid #22281b;border-radius:999px;padding:12px 22px;cursor:pointer">Solo las necesarias</button>
+</div></div>
+<script>
+(function(){
+var PIXEL_ID='PIXEL_ID';
+function get(){try{return localStorage.getItem('ck')}catch(e){return null}}
+function loadPixel(){
+ if(window.fbq||PIXEL_ID==='PIXEL_ID')return;
+ !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+ fbq('init',PIXEL_ID);fbq('track','PageView');
+}
+window.track=function(ev,p){if(window.fbq)fbq('track',ev,p||{})};
+window.cookieSet=function(v){try{localStorage.setItem('ck',v)}catch(e){}document.getElementById('ck').hidden=true;if(v==='si'){loadPixel();if(window.onPixelReady)window.onPixelReady()}};
+window.cookieSettings=function(){document.getElementById('ck').hidden=false};
+window.noVender=function(){cookieSet('no');alert('Listo. No compartiremos tu información con plataformas de publicidad.')};
+// NOTA FRANK: California (CCPA/CPRA) obliga a respetar la señal Global Privacy Control del navegador: si viene activa, no se carga el píxel.
+if(navigator.globalPrivacyControl){try{localStorage.setItem('ck','no')}catch(e){}return}
+var c=get();if(c==='si')loadPixel();else if(!c)document.getElementById('ck').hidden=false;
+})();
+</script>
+<script>
+// NOTA FRANK: lee ?plan= y ?v= de la URL, muestra el plan y envía Purchase una sola vez por compra.
+(function(){
+  var NOMBRES={basico_individual:"Plan Básico individual",basico_pareja:"Plan Básico pareja",vip:"Plan VIP",exito:"Plan Éxito",sesion_250:"Sesión privada con Esmeralda",deed_transfer:"Deed Transfer"};
+  var q=new URLSearchParams(location.search);
+  var plan=(q.get("plan")||"").toLowerCase();
+  var v=Number(q.get("v"));
+  if(!NOMBRES[plan])plan="";
+  if(!(v>0&&v<100000))v=0;
+  if(plan){
+    document.getElementById("resumen").textContent="Compraste: "+NOMBRES[plan]+". Tu pago se procesó con Stripe y te llegará un recibo a tu correo.";
+    var pasos=document.getElementById("listaPasos");
+    if(plan==="sesion_250"||plan==="deed_transfer"){
+      pasos.innerHTML='<li>Revisa tu correo: te llega el recibo de Stripe.</li><li>Nuestro equipo te llama para '+(plan==="sesion_250"?'agendar tu sesión de 45 minutos por Zoom con Esmeralda.':'pedirte los datos de tu propiedad.')+'</li>'+(plan==="sesion_250"?'<li>Si en 30 días compras el Plan VIP o el Plan Éxito, te abonamos los $250.</li>':'');
+    }else if(plan.indexOf("basico")===0){
+      pasos.innerHTML='<li>Revisa tu correo: te llega el recibo de Stripe.</li><li>Te enviamos tu acceso a Trust &amp; Will para que completes tus datos a tu ritmo.</li>';
+    }
+  }
+  function enviar(){
+    if(!plan||!v||!window.track||!window.fbq)return;
+    var clave="compra_"+plan+"_"+v;
+    try{if(sessionStorage.getItem(clave))return;sessionStorage.setItem(clave,"1")}catch(e){}
+    window.track("Purchase",{value:v,currency:"USD",content_name:plan});
+  }
+  window.onPixelReady=enviar;
+  enviar();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+# NOTA FRANK #1: DOMINIO es un marcador; cambiarlo por el dominio real cuando exista.
+# gracias.html no se bloquea aquí: lleva meta robots noindex, y Google necesita poder leerla para ver ese noindex.
+User-agent: *
+Allow: /
+
+Sitemap: https://DOMINIO/sitemap.xml
